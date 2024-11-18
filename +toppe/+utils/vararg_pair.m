@@ -23,8 +23,8 @@
 %
 % From the Michigan IRT, https://web.eecs.umich.edu/~fessler/code/
 
-import toppe.*
-import toppe.utils.*
+% import toppe.*
+% import toppe.utils.*
 
 if nargin < 1, help(mfilename), error(mfilename), end
 if nargin == 1 && streq(opt, 'test'), vararg_pair_test, clear, return, end
