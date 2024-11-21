@@ -30,8 +30,9 @@ function writemod(sysGE, varargin)
 %                 Using non-zero nChop helps reduce module duration on scanner.
 %                 Default: [0 0] 
 
-import toppe.*
-import toppe.utils.*
+% import function not available in octave
+% import toppe.*
+% import toppe.utils.*
 
 nReservedInts = 2;   % [nChop(1) rfres], rfres = # samples in RF/ADC window
 maxHdrInts = 32 - nReservedInts;
@@ -51,8 +52,9 @@ arg.hdrfloats = [];
 arg.hdrints   = [];
 arg.nChop = nChopDefault;
 
-%arg = toppe.utils.vararg_pair(arg, varargin);
-arg = vararg_pair(arg, varargin);
+% NJM: import function not implemented in octave, so this is needed 
+arg = toppe.utils.vararg_pair(arg, varargin);
+%arg = vararg_pair(arg, varargin);
 
 %% Check nChop
 %if ~isempty(arg.rf)
