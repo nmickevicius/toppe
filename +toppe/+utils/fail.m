@@ -16,4 +16,4 @@ else
 end
 %error fail
 % evalin('caller', 'error()')
-error();
+% error();
