@@ -23,8 +23,8 @@ function [rf,gx,gy,gz,desc,paramsint16,paramsfloat,hdr] = readmod(fname,showinfo
 % $Id: readmod.m,v 1.5 2018/11/13 18:07:29 jfnielse Exp $
 % $Source: /export/home/jfnielse/Private/cvs/projects/psd/toppe/matlab/+toppe/readmod.m,v $
 
-import toppe.*
-import toppe.utils.*
+% import toppe.*
+% import toppe.utils.*
 
 nReservedInts = 2;   % [nChop(1) rfres], rfres = # samples in RF/ADC window
 
