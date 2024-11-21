@@ -57,8 +57,8 @@ function write2loop(modname, system, varargin)
 %                                'add'   Average with existing
 %                                'reset' Erase data (?)
 
-import toppe.*
-import toppe.utils.*
+% import toppe.*
+% import toppe.utils.*
 
 %% parse inputs
 % Defaults
@@ -93,7 +93,7 @@ checkInputs(arg);
 
 %% Apply in-plane rotation angle 'rot' to arg.rotmat
 n = arg.rotmat*[0 0 1]';   % axis of rotation
-R = angleaxis2rotmat(arg.rot, n);
+R = toppe.angleaxis2rotmat(arg.rot, n);
 rotmat = R*arg.rotmat;
 
 %% Set up persistant values for tracking values inbetween calls
