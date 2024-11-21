@@ -84,11 +84,11 @@ for ii = 1:length(fields)
 end
 
 %% Force all waveform arrays to have the same dimensions 
-[rf, gx, gy, gz] = padwaveforms('rf', rf, 'gx', gx, 'gy', gy, 'gz', gz);
+[rf, gx, gy, gz] = toppe.padwaveforms('rf', rf, 'gx', gx, 'gy', gy, 'gz', gz);
 	
 
 %% Check waveforms against system hardware limits
-if ~checkwaveforms(sysGE, 'rf', rf, 'gx', gx, 'gy', gy, 'gz', gz)
+if ~toppe.checkwaveforms(sysGE, 'rf', rf, 'gx', gx, 'gy', gy, 'gz', gz)
 	('Waveforms failed system hardware checks -- exiting');
 end
 
