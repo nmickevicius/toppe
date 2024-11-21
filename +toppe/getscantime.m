@@ -19,8 +19,8 @@ function dur = getscantime(sysGE, varargin)
 % Output:
 %    dur          sec
 
-import toppe.*
-import toppe.utils.*
+% import toppe.*
+% import toppe.utils.*
 
 %% parse inputs
 % Default values
