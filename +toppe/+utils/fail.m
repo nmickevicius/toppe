@@ -15,4 +15,4 @@ else
 	printf(['Fail: %s %d'], name, line)
 end
 %error fail
-evalin('caller', 'error(''!'')')
+evalin('caller', 'error()')
