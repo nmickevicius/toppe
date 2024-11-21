@@ -15,8 +15,8 @@ function [isValid, gmax, slewmax] = checkwaveforms(sysGE, varargin)
 %  gmax       [1 3] Max gradient amplitude on the three gradient axes (x, y, z) (G/cm)
 %  slewmax    [1 3] Max slew rate on the three gradient axes (x, y, z) (G/cm/ms) (G/cm/ms)
 
-import toppe.*
-import toppe.utils.*
+% import toppe.*
+% import toppe.utils.*
 
 isValid = true;
 
@@ -40,7 +40,7 @@ for ii = 1:length(fields)
 end
 
 %% Zero-pad at end to equal size
-[rf, gx, gy, gz] = padwaveforms('rf', rf, 'gx', gx, 'gy', gy, 'gz', gz);
+[rf, gx, gy, gz] = toppe.padwaveforms('rf', rf, 'gx', gx, 'gy', gy, 'gz', gz);
 
 %% Check against system hardware limits
 

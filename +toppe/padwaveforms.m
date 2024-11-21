@@ -18,8 +18,9 @@ function [rf, gx, gy, gz] = padwaveforms(varargin)
 %   gy            [ndat npulses]
 %   gz            [ndat npulses]
 
-import toppe.*
-import toppe.utils.*
+% NJM: for octave
+% import toppe.*
+% import toppe.utils.*
 
 % Defaults
 arg.rf = [];
@@ -28,8 +29,8 @@ arg.gy = [];
 arg.gz = [];
 
 % replace defaults with user inputs
-%arg = toppe.utils.vararg_pair(arg, varargin);
-arg = vararg_pair(arg, varargin);
+arg = toppe.utils.vararg_pair(arg, varargin);
+%arg = vararg_pair(arg, varargin);
 
 % Copy input waveform to rf, gx, gy, and gz (so we don't have to carry the arg. prefix around)
 fields = {'rf' 'gx' 'gy' 'gz'};
